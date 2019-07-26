@@ -178,7 +178,7 @@ list( APPEND ansakString_privIncludes ${bitsDir} source )
 target_include_directories( ansakString PRIVATE ${ansakString_privIncludes} PUBLIC interface )
 
 ##############################################################################################################
-if( _useUnitTests )
+if( BUILD_TESTING )
   add_executable( mkUnicodeTestData mkUnicodeTestData/mkUnicodeTestData.cxx )
   target_link_libraries( mkUnicodeTestData PRIVATE ansakString )
 
